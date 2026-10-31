@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+runs/
+.env
+.nev
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.DS_Store
+.vscode/
+.idea/
+PROJECT_SPEC.md
+IMPLEMENTATION_PLAN.md
+DEMO_GUIDE.md

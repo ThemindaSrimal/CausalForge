@@ -1,0 +1,30 @@
+.status b {
+  background: var(--mint);
+  color: #07100e;
+  font: 700 9px ui-monospace, monospace;
+  letter-spacing: .12em;
+  padding: 4px 6px;
+}
+
+.status.replay b {
+  background: #ffbf69;
+  color: #1b1100;
+}
+
+#status-dot {
+  background: #64727a;
+  border-radius: 50%;
+  box-shadow: 0 0 14px currentColor;
+  height: 8px;
+  width: 8px;
+}
+
+.status.live #status-dot { background: var(--mint); }
+.status.busy #status-dot { background: #ffd166; }
+
+.replay-button {
+  background: #1d1710;
+  border-color: #6b512d;
+  color: #ffca80;
+  grid-column: 1 / -1;
+}

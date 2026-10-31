@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CausalForge — Live Causal Laboratory</title>
+  <meta name="description" content="A live 3D view of Muse Spark investigating procedural causal worlds.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/replay.css">
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="mark">CF</span><div><strong>CausalForge</strong><small>LIVE CAUSAL LABORATORY</small></div></div>
+    <div class="status"><b id="mode-badge">LIVE</b><span id="status-dot"></span><span id="status-label">Not initialized</span></div>
+  </header>
+  <main>
+    <section class="viewport-panel">
+      <canvas id="scene" aria-label="3D visualization of the current simulation state"></canvas>
+      <div class="scene-label"><span>AUTHORITATIVE STATE</span><strong id="experiment-label">Experiment 0 / 10</strong></div>
+      <div id="entity-labels" class="entity-labels"></div>
+      <div class="legend"><span><i class="negative"></i>negative</span><span><i class="neutral"></i>neutral</span><span><i class="positive"></i>positive</span></div>
+    </section>
+    <aside>
+      <section class="control-card">
+        <div class="eyebrow">WORLD CONTROL</div>
+        <div class="seed-row"><label for="seed">Seed</label><input id="seed" type="number" value="42"><button id="randomize" title="Random seed">↻</button></div>
+        <div class="buttons"><button id="reset" class="secondary">Reset world</button><button id="start" class="primary">Start agent</button><button id="step" class="secondary">Step once</button><button id="reveal" class="ghost">Reveal rule</button><button id="replay" class="replay-button">Load recorded replay</button></div>
+      </section>
+      <section class="metrics">
+        <article><span>API SPEND</span><strong id="cost">$0.0000</strong></article>
+        <article><span>TRAINING ROWS</span><strong id="rows">0</strong></article>
+      </section>
+      <section class="card">
+        <div class="eyebrow">LOCAL MODEL</div>
+        <div id="coefficients" class="coefficients"></div>
+      </section>
+      <section class="card grow">
+        <div class="eyebrow">SCIENTIST LOG</div>
+        <div id="scientist-log" class="log"><p>Reset a world to begin.</p></div>
+      </section>
+      <section id="truth-card" class="card truth hidden">
+        <div class="eyebrow">REVEALED GROUND TRUTH</div>
+        <pre id="truth"></pre>
+      </section>
+    </aside>
+  </main>
+  <div id="toast" role="alert"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
