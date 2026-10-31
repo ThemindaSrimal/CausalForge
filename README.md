@@ -100,10 +100,6 @@ The repository is deliberately a modular monolith:
 
 See [ARCHITECTURE.md](ARCHITECTURE.md) for the system diagram and trust boundaries.
 
-## Cost controls
-
-Meta usage is estimated from provider-reported tokens. Each run has a configurable cap, while `runs/meta-spend.json` enforces a persistent project-level stop at $120—leaving a $30 margin below the $150 project ceiling.
-
 ## License
 
 MIT — see [LICENSE](LICENSE).
